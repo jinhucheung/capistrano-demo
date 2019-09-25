@@ -1,24 +1,38 @@
-# README
+# Capistrano Demo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Automated Deploys Rails application by [Capistrano](https://github.com/capistrano/capistrano)
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+Cloning this repository:
 
-* System dependencies
+```
+$ git clone git@github.com:jinhucheung/capistrano-demo.git
+```
 
-* Configuration
+Then enters `capistrano-demo` directory:
 
-* Database creation
+```
+$ cd capistrano-demo
+```
 
-* Database initialization
+Copying database configuration file, change it for you:
 
-* How to run the test suite
+```
+$ cp config/database.yml.example config/database.yml
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Contributing
 
-* Deployment instructions
+Bug report or pull request are welcome.
 
-* ...
+1. Fork it
+2. Create your feature branch (git checkout -b my-new-feature)
+3. Commit your changes (git commit -am 'Add some feature')
+4. Push to the branch (git push origin my-new-feature)
+
+Please write unit test with your code if necessary.
+
+## License
+
+The gem is available as open source under the terms of the [MIT License](MIT-LICENSE).
