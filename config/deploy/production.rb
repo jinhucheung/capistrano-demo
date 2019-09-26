@@ -9,6 +9,9 @@
 
 server "127.0.0.1", user: "deploy", roles: %w{app db web}
 
+set :default_env, {
+  path: "/home/deploy/.nvm/versions/node/v12.11.0/bin:$PATH"
+}
 
 # role-based syntax
 # ==================
