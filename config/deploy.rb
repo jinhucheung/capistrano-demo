@@ -23,11 +23,11 @@ set :deploy_to, "/home/deploy/capistrano-demo"
 # set :pty, true
 
 # Default value for :linked_files is []
-# 如果你使用的 Rails 5.2 以下版本，将 `config/master.key`，改为 `config/secrets.yml`
+# 如果你使用的 Rails 5.2 以下版本，将 `config/master.key`，改为 `unix://#{shared_path}/tmp/sockets/puma.sock/secrets.yml`
 append :linked_files, "config/database.yml", "config/master.key"
 
 # Default value for linked_dirs is []
-append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", "node_modules"
+append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", "public/packs", "node_modules"
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
@@ -35,13 +35,6 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/syst
 set :default_env, {
   node_env: :production
 }
-
-set :puma_bind,       "unix://#{shared_path}/tmp/sockets/puma.sock"
-set :puma_state,      "#{shared_path}/tmp/pids/puma.state"
-set :puma_pid,        "#{shared_path}/tmp/pids/puma.pid"
-set :puma_access_log, "#{release_path}/log/puma.error.log"
-set :puma_error_log,  "#{release_path}/log/puma.access.log"
-set :puma_conf, "#{shared_path}/puma.rb"
 
 # Default value for local_user is ENV['USER']
 # set :local_user, -> { `git config user.name`.chomp }
