@@ -16,7 +16,7 @@ Then enters `capistrano-demo` directory:
 $ cd capistrano-demo
 ```
 
-Copying database configuration file, change it for you:
+Copying database configuration file, changes it for you:
 
 ```
 $ cp config/database.yml.example config/database.yml
@@ -35,4 +35,4 @@ Please write unit test with your code if necessary.
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](MIT-LICENSE).
+The repository is available as open source under the terms of the [MIT License](MIT-LICENSE).
