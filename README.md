@@ -22,6 +22,22 @@ Copying database configuration file, changes it for you:
 $ cp config/database.yml.example config/database.yml
 ```
 
+Then regenerates `master.key` for production, links [How to regenerate the master key for Rails 5.2 credentials](https://gist.github.com/db0sch/19c321cbc727917bc0e12849a7565af9)
+
+And then execute:
+
+```
+$ bundle install
+```
+
+## Usage
+
+Deploys production environments:
+
+```
+$ cap production deploy
+```
+
 ## Contributing
 
 Bug report or pull request are welcome.
